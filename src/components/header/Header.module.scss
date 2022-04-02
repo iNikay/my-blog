@@ -1,0 +1,97 @@
+.header {
+  height: 67px;
+  position: relative;
+}
+
+.headerInner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 29px;
+  .rightBlock {
+    display: flex;
+    div {
+      margin-left: 27px;
+      cursor: pointer;
+      position: relative;
+      .tooltipText {
+        position: absolute;
+        visibility: hidden;
+        background-color: #2d2d2d;
+        color: #fff;
+        font-size: 14px;
+        line-height: 28px;
+        font-weight: 400;
+        border-radius: 6px;
+        padding: 0px 10px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 9;
+        top: 200%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+      }
+      .tooltipText::after {
+        content: '';
+        padding: 5px;
+        position: absolute;
+        background: #2d2d2d;
+        left: 42%;
+        top: -13%;
+        transform: rotate(-45deg);
+        border-radius: 2px;
+      }
+    }
+    div:hover {
+      .tooltipText {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.searchBlock {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: width 0.5s ease-out;
+  .inputSearch {
+    width: 100%;
+    height: 100%;
+    background: #f9fafd;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 29px;
+    padding-right: 65px;
+    outline: none;
+    &::placeholder {
+      font-size: 16px;
+      line-height: 24px;
+      color: #798fa8;
+    }
+  }
+  .closeInput {
+    position: absolute;
+    top: 25px;
+    right: 32px;
+    cursor: pointer;
+  }
+}
+.hide {
+  width: 0%;
+  .closeInput {
+    display: none;
+  }
+}
+.show {
+  width: 100%;
+  .closeInput {
+    display: block;
+  }
+}

@@ -1,0 +1,113 @@
+.menu {
+  position: absolute;
+  right: -100px;
+  top: 0;
+  width: 100px;
+  height: 100vh;
+  background: #13315e;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: width 0.5s ease-out;
+  margin: 0;
+  z-index: 5;
+  &.show {
+    width: 400px;
+    .bottomBlock {
+      background: #0a2246;
+      height: 78px;
+      align-items: center;
+      padding-left: 35px;
+      span {
+        margin-left: 11px;
+      }
+      .strip1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+      .strip2 {
+        opacity: 0;
+      }
+      .strip3 {
+        transform: rotate(45deg) translate(-4px, -5px);
+      }
+    }
+  }
+  &.hide {
+    .topBlock {
+      opacity: 0;
+    }
+    width: 100px;
+    .bottomBlock {
+      position: relative;
+      margin-bottom: 25px;
+      display: flex;
+      flex-direction: column-reverse;
+      padding-left: 40px;
+      span {
+        position: absolute;
+        transform: rotate(-90deg);
+        bottom: 54px;
+        left: 26px;
+      }
+    }
+  }
+}
+//---------------------------------------------------------------------------------------//
+.userInfo {
+  padding-left: 43px;
+  margin-top: 26px;
+  margin-bottom: 33px;
+  .userName {
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 52px;
+  }
+  .date {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 52px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+ul {
+  li {
+    font-weight: 500;
+    font-size: 20px;
+    div {
+      padding: 13px 43px;
+    }
+    a {
+      color: #fff;
+
+      line-height: 52px;
+    }
+  }
+
+  li:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+}
+//---------------------------------------------------------------------------------------//
+.bottomBlock {
+  padding-top: 15px;
+  cursor: pointer;
+  bottom: 0;
+  font-weight: 600;
+  font-size: 17px;
+  display: flex;
+  span {
+    color: #fff;
+  }
+}
+.burgerBtn {
+  * {
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 5px;
+    transition: 0.3s;
+  }
+}
+//---------------------------------------------------------------------------------------//

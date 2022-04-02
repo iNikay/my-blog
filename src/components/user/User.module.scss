@@ -1,0 +1,54 @@
+.userProfile {
+  color: #202020;
+  margin-right: 20px;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-top: 72px;
+  .userProfileWrapper {
+    padding: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #f0f2f5;
+  }
+  &:hover::-webkit-scrollbar-thumb {
+    background: #13315e;
+  }
+}
+.userName {
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 52px;
+  margin-bottom: 15px;
+}
+.userTitle {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 52px;
+  color: #aaaaaa;
+  margin-bottom: 23px;
+}
+.avatar {
+  margin-bottom: 24px;
+}
+.aboutMe {
+  max-width: 584px;
+  h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 52px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #000000;
+  }
+}

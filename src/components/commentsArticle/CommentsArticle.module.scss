@@ -1,0 +1,35 @@
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  color: #0a3465;
+  margin-bottom: 37px;
+}
+
+.commentsBlock {
+  & > *:not(:last-child) {
+    border-bottom: 1px solid #f1f1f1;
+  }
+}
+
+.comment {
+  .commetnInfo {
+    display: flex;
+    justify-content: space-between;
+    .fullName {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 18px;
+      color: #373737;
+    }
+    .commentDate {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      font-feature-settings: 'tnum' on, 'lnum' on;
+      color: #c1c1c1;
+    }
+  }
+}
