@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import styles from './Menu.module.scss';
+import { Link } from 'react-router-dom';
 
 export const Menu: React.FC = () => {
   const [showMenu, setShowMenu] = React.useState(false);
@@ -15,25 +16,25 @@ export const Menu: React.FC = () => {
         <nav className="nav">
           <ul>
             <li>
-              <a href="/">
+              <Link to="/">
                 <div> Главная </div>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/">
+              <Link to="/user/userinfo">
                 <div> Мой профиль</div>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/">
+              <Link to="/user/createarticle">
                 {' '}
                 <div>Создать запись</div>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/">
+              <Link to="/">
                 <div> Выйти</div>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

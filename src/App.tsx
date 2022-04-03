@@ -1,4 +1,6 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { CreateArticle } from './components/createArticle';
 import { Header } from './components/header/index';
 import { Menu } from './components/menu';
 import { ModalWindow } from './components/modalWindow';
@@ -11,7 +13,11 @@ const App = () => {
     <div className="app">
       {/* <ModalWindow /> */}
       <div className="container">
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/user/:page" element={<UserPage />} />
+        </Routes>
+        <Menu />
       </div>
     </div>
   );

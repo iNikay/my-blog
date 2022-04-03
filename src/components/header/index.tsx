@@ -7,6 +7,7 @@ import logo from '../../assets/icons/logo.svg';
 import search from '../../assets/icons/search.svg';
 import user from '../../assets/icons/user.svg';
 import { ModalWindow } from '../modalWindow';
+import { Link } from 'react-router-dom';
 
 export const Header: React.FC = () => {
   const [searchShow, setSearchShow] = React.useState(false);
@@ -15,9 +16,13 @@ export const Header: React.FC = () => {
     <>
       <div className={styles.header}>
         <div className={styles.headerInner}>
-          <div className="logo">
-            <img src={logo} alt="logo" />
-          </div>
+          <Link to="/">
+            {' '}
+            <div className="logo">
+              <img src={logo} alt="logo" />
+            </div>
+          </Link>
+
           <div className={styles.rightBlock}>
             <div onClick={() => setSearchShow(true)}>
               <img src={search} alt="search" />

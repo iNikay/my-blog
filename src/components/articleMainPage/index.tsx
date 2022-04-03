@@ -4,6 +4,7 @@ import eye from '../../assets/icons/eye.svg';
 import fon from '../../assets/fon.png';
 
 import styles from './ArticleMainPage.module.scss';
+import { Link } from 'react-router-dom';
 
 export const ArticleMainPage = () => {
   return (
@@ -20,7 +21,10 @@ export const ArticleMainPage = () => {
                   <span>301</span>
                 </div>
               </div>
-              <h1 className={styles.title}>Какой-то очень интересный заголовок</h1>
+              <Link to="user/fullarticle">
+                <h1 className={styles.title}>Какой-то очень интересный заголовок</h1>
+              </Link>
+
               <h2 className={styles.description}>
                 Я часто замечаю, что начинающие фронтенд-разработчики по несколько раз то начинают,
                 то забрасывают изучение технологий.
